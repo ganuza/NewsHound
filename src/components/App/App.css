@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 15% auto;
+  grid-template-rows: 20% auto;
   grid-template-areas:
     'header'
     'headlines';
