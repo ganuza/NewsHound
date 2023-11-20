@@ -11,11 +11,13 @@ const Headlines = ({ headlines }) => {
       title={headline.title}
       description={headline.description}
       imgUrl={headline.urlToImage}
+      content={headline.content}
+      date={headline.publishedAt.slice(0, 10)}
     />
   })
 
   return (
-    <div>
+    <div className='headlines-cont'>
       {headlineCards}
     </div>
     

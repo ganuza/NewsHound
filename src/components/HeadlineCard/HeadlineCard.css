@@ -1,5 +1,22 @@
 .headlineCard {
-  border: 3px solid black;
+  border: 3px solid lightgray;
+  border-radius: 15px;
   padding: 10px;
   margin: 10px;
+}
+
+.headlineCard:hover {
+  border: solid black;
+  box-shadow: 2px;
+}
+
+.headline-card-image {
+  height: 90px;
+  width: auto;
+}
+
+.headline-img {
+  border: 2px solid red;
+  height: auto;
+  width: auto;
 }
