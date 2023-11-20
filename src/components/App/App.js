@@ -1,9 +1,11 @@
+import Header from '../Header/Header';
 import './App.css';
 
 function App() {
+
   return (
     <main className="App">
-      <h1>NewsHound</h1>
+      <Header className='header'/>
     </main >
   );
 }
