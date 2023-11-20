@@ -6,4 +6,5 @@
   grid-template-areas:
     'header'
     'headlines';
+    grid-gap: none;
 }
