@@ -4,7 +4,7 @@ import './HeadlineCard.css'
 const HeadlineCard = ({ source, title, content, description, imgUrl, date }) => {
 
   return (
-    <Link className ='story-link' to={`/story/${date}`}>
+    <Link className ='story-link' to={`/story/${title}`}>
       <div className='headlineCard'>
         <h2>{source}</h2>
         <h2>{title}</h2>

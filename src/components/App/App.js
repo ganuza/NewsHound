@@ -70,7 +70,7 @@ function App() {
       <Header className='header'/>
       <Routes>
         <Route path='/' element={<Headlines className='headlines' headlines={headlines}/>}/>
-        <Route path='/story/:id' element={<SelectedArticle className='selectedArticle' />}/>
+        <Route path='/story/:title' element={<SelectedArticle className='selectedArticle' headlines={headlines}/>}/>
         {/* <Route path='*' element={<ErrorComponent />}/> */}
       </Routes>
       
