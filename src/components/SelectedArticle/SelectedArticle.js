@@ -10,14 +10,20 @@ const SelectedArticle = ({ headlines }) => {
 
   console.log('selectedStory: ', selectedStory)
   return (
-    <div className='selected-article-cont'>
-      <h2>Hello from SelectedArticle</h2>
-      <h2>{selectedStory.title}</h2>
-      <img src={selectedStory.urlToImage}/>
-      <h3>{selectedStory.publishedAt.slice(0, 10)}</h3>
-      <p>{selectedStory.content}</p>
-      <p>{selectedStory.source.name}</p>
-    </div>
+    <section className='selected-article-page'>
+      <div className='selected-article-cont'>
+            <div className='selected-article-details'>
+              <h2>{selectedStory.title}</h2>
+            
+            <h3>{selectedStory.publishedAt.slice(0, 10)}</h3>
+            <p>{selectedStory.content}</p>
+            <p>{selectedStory.source.name}</p>
+            </div>
+            
+            <img className='selected-article-image' src={selectedStory.urlToImage}/>
+          </div>
+    </section>
+    
     
   )
 }

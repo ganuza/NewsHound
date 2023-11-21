@@ -1,0 +1,24 @@
+.selected-article-page {
+  display: flex;
+  align-items: center;
+}
+
+.selected-article-cont {
+  background-color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+
+}
+
+.selected-article-details {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 60%;
+}
+.selected-article-image {
+  height: 300px;
+}
