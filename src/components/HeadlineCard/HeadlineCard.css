@@ -20,3 +20,7 @@
   height: auto;
   width: auto;
 }
+
+.story-link {
+  text-decoration: none;
+}
