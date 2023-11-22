@@ -70,19 +70,25 @@ function App() {
     setSearchTerm(searchTerm)
   }
 
-
+  console.log('headlineError: ', headlineError)
 
   return (
     <main className="App">
       <Header className='header' handleSearchTerm={handleSearchTerm}/>
+      {headlineError ? (
+        <div className='app-error-container'>
+          <ErrorComponent headlineError={headlineError} message="We're experiencing server issues.  Please try again later."/>
+        </div>
+      ) : (
+      
       <Routes>
         <Route path='/' element={<Headlines className='headlines' headlines={headlines} searchTerm={searchTerm}/>}/>
         <Route path='/story/:title' element={<SelectedArticle className='selectedArticle' headlines={headlines}/>}/>
         <Route path='*' element={<ErrorComponent headlineError={headlineError} message="We can't find that page, please try again."/>}/>
       </Routes>
-      
+      )}
     </main >
-  );
+  )
 }
 
 export default App;
