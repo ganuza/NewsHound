@@ -1,9 +1,18 @@
 import HeadlineCard from '../HeadlineCard/HeadlineCard'
 import './Headlines.css'
 
-const Headlines = ({ headlines }) => {
+const Headlines = ({ headlines, searchTerm }) => {
   console.log('headlines: ', headlines)
-  const headlineCards = headlines.map((headline, index) => {
+
+  let filteredHeadlines = headlines
+
+  if (searchTerm) {
+    filteredHeadlines = headlines.filter((headline) => 
+      headline.title.toLowerCase().includes(searchTerm.toLowerCase())
+      || headline.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  }
+  const headlineCards = filteredHeadlines.map((headline, index) => {
     return <HeadlineCard
       id={index}
       key={index}
