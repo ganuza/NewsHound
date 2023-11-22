@@ -1,9 +1,14 @@
 import './ErrorComponent.css'
 
-const ErrorComponent = () => {
+const ErrorComponent = ({headlineError, message}) => {
 
   return (
-    <h2>Hello from Error Component</h2>
+    <article className='error-container'>
+      <h2 className='error-h2'>Error</h2>
+      <h3 className='error-h3'></h3>
+      <h3 cassName='error-h3'>{message}</h3>
+    </article>
+    
   )
 }
 

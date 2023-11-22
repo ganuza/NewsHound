@@ -54,7 +54,7 @@ function App() {
     ]
   }
   const [headlines, setHeadlines] = useState(dummyHeadlines.articles)
-  const [headlineError, setHedlineError] = useState('')
+  const [headlineError, setHeadlineError] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
 
   // useEffect(() => {
@@ -63,7 +63,7 @@ function App() {
   //       console.log('data: ', data)
   //       setHeadlines(data.articles)
   //     })
-  //     .catch(error => console.log(error))
+  //     .catch(error => setHeadlineError(error.message))
   // }, [])
 
   const handleSearchTerm = (searchTerm) => {
@@ -78,7 +78,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Headlines className='headlines' headlines={headlines} searchTerm={searchTerm}/>}/>
         <Route path='/story/:title' element={<SelectedArticle className='selectedArticle' headlines={headlines}/>}/>
-        <Route path='*' element={<ErrorComponent />}/>
+        <Route path='*' element={<ErrorComponent headlineError={headlineError} message="We can't find that page, please try again."/>}/>
       </Routes>
       
     </main >
