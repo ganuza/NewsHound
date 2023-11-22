@@ -27,9 +27,11 @@ const Headlines = ({ headlines, searchTerm }) => {
 
   return (
     <div className='headlines-cont'>
-      {headlineCards}
+      {!headlines ? (
+        <p>Loading...</p>
+      ) : (
+      headlineCards)}
     </div>
-    
   )
 }
 
