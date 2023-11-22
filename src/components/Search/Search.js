@@ -1,18 +1,26 @@
 import { useState } from 'react'
 import './Search.css'
 
-const Search = () => {
+const Search = ({ handleSearchTerm }) => {
 
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchWord, setSearchWord] = useState('')
 
+  const submitSearch = (event) => {
+    event.preventDefault()
+    
+    setSearchWord(event.target.value)
+    handleSearchTerm(event.target.value)
+  }
+
+  
   return (
     <section className='search-container'>
       <input
         type='text'
         name='search'
         placeholder='Search'
-        value={searchTerm}
-        onChange={event => setSearchTerm(event.target.value)}
+        value={searchWord}
+        onChange={event => submitSearch(event)}
         />
 
 
