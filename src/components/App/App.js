@@ -54,6 +54,7 @@ function App() {
   }
   const [headlines, setHeadlines] = useState(dummyHeadlines.articles)
   const [headlineError, setHedlineError] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')
 
   // useEffect(() => {
   //   getHeadlines()
@@ -64,12 +65,17 @@ function App() {
   //     .catch(error => console.log(error))
   // }, [])
 
+  const handleSearchTerm = (searchTerm) => {
+    setSearchTerm(searchTerm)
+  }
+
+
 
   return (
     <main className="App">
-      <Header className='header'/>
+      <Header className='header' handleSearchTerm={handleSearchTerm}/>
       <Routes>
-        <Route path='/' element={<Headlines className='headlines' headlines={headlines}/>}/>
+        <Route path='/' element={<Headlines className='headlines' headlines={headlines} searchTerm={searchTerm}/>}/>
         <Route path='/story/:title' element={<SelectedArticle className='selectedArticle' headlines={headlines}/>}/>
         {/* <Route path='*' element={<ErrorComponent />}/> */}
       </Routes>
