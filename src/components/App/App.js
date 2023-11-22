@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import Headlines from '../Headlines/Headlines'
-import SelectedArticle from '../SelectedArticle/SelectedArticle';
+import SelectedArticle from '../SelectedArticle/SelectedArticle'
+import ErrorComponent from '../ErrorComponent/ErrorComponent'
 import { getHeadlines } from '../../apiCalls';
 import './App.css'
 
@@ -77,7 +78,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Headlines className='headlines' headlines={headlines} searchTerm={searchTerm}/>}/>
         <Route path='/story/:title' element={<SelectedArticle className='selectedArticle' headlines={headlines}/>}/>
-        {/* <Route path='*' element={<ErrorComponent />}/> */}
+        <Route path='*' element={<ErrorComponent />}/>
       </Routes>
       
     </main >
