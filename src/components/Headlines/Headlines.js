@@ -1,5 +1,6 @@
 import HeadlineCard from '../HeadlineCard/HeadlineCard'
 import ErrorComponent from '../ErrorComponent/ErrorComponent'
+import PropTypes from 'prop-types'
 import './Headlines.css'
 
 const Headlines = ({ headlines, searchTerm }) => {
@@ -40,3 +41,20 @@ const Headlines = ({ headlines, searchTerm }) => {
 }
 
 export default Headlines
+
+Headlines.propTypes = {
+  headlines: PropTypes.arrayOf(PropTypes.shape({
+    author: PropTypes.string,
+    content: PropTypes.string,
+    description: PropTypes.string,
+    publishedAt: PropTypes.string,
+    source: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string
+    }),
+    title: PropTypes.string,
+    url: PropTypes.string,
+    urlToImage: PropTypes.string
+  })),
+  searchTerm: PropTypes.string
+}
