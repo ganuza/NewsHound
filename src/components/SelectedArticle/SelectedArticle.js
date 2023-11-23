@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './SelectedArticle.css'
 
 const SelectedArticle = ({ headlines }) => {
@@ -29,3 +30,19 @@ const SelectedArticle = ({ headlines }) => {
 }
 
 export default SelectedArticle
+
+SelectedArticle.propTypes = {
+  headlines: PropTypes.arrayOf(PropTypes.shape({
+    author: PropTypes.string,
+    content: PropTypes.string,
+    description: PropTypes.string,
+    publishedAt: PropTypes.string,
+    source: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string
+    }),
+    title: PropTypes.string,
+    url: PropTypes.string,
+    urlToImage: PropTypes.string
+  }))
+}
