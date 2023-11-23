@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './HeadlineCard.css'
 
 const HeadlineCard = ({ source, title, content, description, imgUrl, date }) => {
@@ -23,3 +24,11 @@ const HeadlineCard = ({ source, title, content, description, imgUrl, date }) => 
 }
 
 export default HeadlineCard
+
+HeadlineCard.propTypes = {
+  source: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  imgUrl: PropTypes.string,
+  date: PropTypes.string
+}

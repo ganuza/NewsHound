@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import './Search.css'
 
 const Search = ({ handleSearchTerm }) => {
@@ -29,3 +30,7 @@ const Search = ({ handleSearchTerm }) => {
 }
 
 export default Search
+
+Search.propTypes = {
+  handleSearchTerm: PropTypes.func
+}
