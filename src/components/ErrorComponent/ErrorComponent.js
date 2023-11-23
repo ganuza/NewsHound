@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './ErrorComponent.css'
 
 const ErrorComponent = ({ headlineError, message }) => {
@@ -15,3 +16,8 @@ const ErrorComponent = ({ headlineError, message }) => {
 }
 
 export default ErrorComponent
+
+ErrorComponent.propTypes = {
+  headlineError: PropTypes.string,
+  message: PropTypes.string
+}
