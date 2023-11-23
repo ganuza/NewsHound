@@ -1,4 +1,5 @@
 import HeadlineCard from '../HeadlineCard/HeadlineCard'
+import ErrorComponent from '../ErrorComponent/ErrorComponent'
 import './Headlines.css'
 
 const Headlines = ({ headlines, searchTerm }) => {
@@ -30,7 +31,10 @@ const Headlines = ({ headlines, searchTerm }) => {
       {!headlines ? (
         <p>Loading...</p>
       ) : (
-      headlineCards)}
+        filteredHeadlines.length === 0 ? (
+          <h3>We're sorry, no stories match your search.</h3>
+        ) : (
+      headlineCards))}
     </div>
   )
 }
