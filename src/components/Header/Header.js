@@ -1,4 +1,5 @@
 import Search from '../Search/Search'
+import PropTypes from 'prop-types'
 import './Header.css'
 
 const Header = ({ handleSearchTerm }) => {
@@ -13,3 +14,7 @@ const Header = ({ handleSearchTerm }) => {
 }
 
 export default Header
+
+Header.propTypes = {
+  handleSearchTerm: PropTypes.func
+}
