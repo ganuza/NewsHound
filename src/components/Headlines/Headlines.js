@@ -14,10 +14,12 @@ const Headlines = ({ headlines, searchTerm }) => {
       || headline.description.toLowerCase().includes(searchTerm.toLowerCase())
     )
   }
+
+  console.log('Headlines filteredHeadlines: ', filteredHeadlines)
   const headlineCards = filteredHeadlines.map((headline, index) => {
     return <HeadlineCard
       id={index}
-      key={index}
+      key={headline.id}
       source={headline.source.name}
       title={headline.title}
       description={headline.description}
