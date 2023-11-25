@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { cleanData } from '../../utils';
 import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import Headlines from '../Headlines/Headlines'
@@ -53,18 +54,18 @@ function App() {
         }
     ]
   }
-  const [headlines, setHeadlines] = useState(dummyHeadlines.articles)
+  const [headlines, setHeadlines] = useState([])
   const [headlineError, setHeadlineError] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
 
-  // useEffect(() => {
-  //   getHeadlines()
-  //     .then(data => {
-  //       console.log('data: ', data)
-  //       setHeadlines(data.articles)
-  //     })
-  //     .catch(error => setHeadlineError(error.message))
-  // }, [])
+  useEffect(() => {
+    getHeadlines()
+      .then(data => {
+        console.log('data: ', data)
+        setHeadlines(cleanData(data.articles))
+      })
+      .catch(error => setHeadlineError(error.message))
+  }, [])
 
   const handleSearchTerm = (searchTerm) => {
     setSearchTerm(searchTerm)
