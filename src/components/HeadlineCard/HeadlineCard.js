@@ -11,7 +11,7 @@ const HeadlineCard = ({ source, title, content, description, imgUrl, date }) => 
         <h2>{title}</h2>
         <p>{description}</p>
         <div className='headline-img'>
-          <img className='headline-card-image' src={imgUrl}/>
+          <img className='headline-card-image' src={imgUrl} alt={title}/>
 
         </div>
         <p>Published: {date}</p>
@@ -27,7 +27,7 @@ export default HeadlineCard
 
 HeadlineCard.propTypes = {
   source: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string,
   imgUrl: PropTypes.string,
   date: PropTypes.string
