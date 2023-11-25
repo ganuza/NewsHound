@@ -19,7 +19,7 @@ const Headlines = ({ headlines, searchTerm }) => {
   const headlineCards = filteredHeadlines.map((headline, index) => {
     return <HeadlineCard
       id={index}
-      key={headline.id}
+      key={headline.title}
       source={headline.source.name}
       title={headline.title}
       description={headline.description}
