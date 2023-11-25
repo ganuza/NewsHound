@@ -1,3 +1,7 @@
+.headlines-cont {
+  height: 85vh;
+}
+
 .headline-card {
   border: 3px solid rgb(193, 193, 193);
   border-radius: 15px;
@@ -20,8 +24,7 @@
 }
 
 .headline-card-image {
-  height: 200px;
-  /* width: auto; */
+  max-height: 200px;
 }
 
 .story-link {
