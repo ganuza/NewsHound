@@ -2,26 +2,19 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './HeadlineCard.css'
 
-const HeadlineCard = ({ source, title, content, description, imgUrl, date }) => {
+const HeadlineCard = ({ source, title, imgUrl, date }) => {
 
   return (
     <Link className ='story-link' to={`/story/${title}`}>
       <div className='headline-card'>
         <div className='story-details'>
           <h2>{source}</h2>
-          <h2>{title}</h2>
-          
+          <h2>{title}</h2> 
           <p>Published: {date}</p>
-          
           <img className='headline-card-image' src={imgUrl} alt={title}/>
-          {/* <p>{description}</p> */}
-        
-        </div>
-          
+        </div>     
       </div>
-    </Link>
-    
-    
+    </Link>   
   )
 }
 
