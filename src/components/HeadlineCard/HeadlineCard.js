@@ -6,16 +6,18 @@ const HeadlineCard = ({ source, title, content, description, imgUrl, date }) => 
 
   return (
     <Link className ='story-link' to={`/story/${title}`}>
-      <div className='headlineCard'>
-        <h2>{source}</h2>
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <div className='headline-img'>
-          <img className='headline-card-image' src={imgUrl}/>
-
-        </div>
-        <p>Published: {date}</p>
+      <div className='headline-card'>
+        <div className='story-details'>
+          <h2>{source}</h2>
+          <h2>{title}</h2>
+          
+          <p>Published: {date}</p>
+          
+          <img className='headline-card-image' src={imgUrl} alt={title}/>
+          {/* <p>{description}</p> */}
         
+        </div>
+          
       </div>
     </Link>
     
@@ -27,7 +29,7 @@ export default HeadlineCard
 
 HeadlineCard.propTypes = {
   source: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string,
   imgUrl: PropTypes.string,
   date: PropTypes.string

@@ -1,6 +1,7 @@
 .selected-article-page {
   display: flex;
   align-items: center;
+  height: 85vh;
 }
 
 .selected-article-cont {
@@ -8,17 +9,24 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 40%;
+  height: 50%;
 
 }
 
 .selected-article-details {
   background-color: white;
+  margin: 0px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 300px;
-  width: 60%;
+  /* height: 80%; */
+  width: 50%;
 }
+
 .selected-article-image {
-  height: 300px;
+  width: 30%;
+}
+
+h2 {
+  font-size: 1.75rem;
 }
