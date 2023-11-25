@@ -1,10 +1,8 @@
 import HeadlineCard from '../HeadlineCard/HeadlineCard'
-import ErrorComponent from '../ErrorComponent/ErrorComponent'
 import PropTypes from 'prop-types'
 import './Headlines.css'
 
 const Headlines = ({ headlines, searchTerm }) => {
-  console.log('headlines: ', headlines)
 
   let filteredHeadlines = headlines
 
@@ -15,8 +13,8 @@ const Headlines = ({ headlines, searchTerm }) => {
     )
   }
 
-  console.log('Headlines filteredHeadlines: ', filteredHeadlines)
   const headlineCards = filteredHeadlines.map((headline, index) => {
+    
     return <HeadlineCard
       id={index}
       key={headline.title}

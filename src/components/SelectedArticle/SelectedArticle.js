@@ -4,27 +4,21 @@ import './SelectedArticle.css'
 
 const SelectedArticle = ({ headlines }) => {
   const {title} = useParams()
-  console.log('title: ', title)
-  console.log('headlines: ', headlines)
 
   const selectedStory = headlines.find((story) => story.title === title)
 
-  console.log('selectedStory: ', selectedStory)
   return (
     <section className='selected-article-page'>
       <div className='selected-article-cont'>
             <div className='selected-article-details'>
               <h2>{selectedStory.title}</h2>
-            <h4>{selectedStory.description}</h4>
-            <p>{selectedStory.content}</p>
-            <p>Published: {selectedStory.publishedAt.slice(0, 10)} {selectedStory.source.name}</p>
+              <h4>{selectedStory.description}</h4>
+              <p>{selectedStory.content}</p>
+              <p>Published: {selectedStory.publishedAt.slice(0, 10)} {selectedStory.source.name}</p>
             </div>
-            
             <img className='selected-article-image' src={selectedStory.urlToImage}/>
           </div>
     </section>
-    
-    
   )
 }
 

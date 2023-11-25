@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import './Search.css'
 
 const Search = ({ handleSearchTerm }) => {
 
@@ -12,8 +11,7 @@ const Search = ({ handleSearchTerm }) => {
     setSearchWord(event.target.value)
     handleSearchTerm(event.target.value)
   }
-
-  
+    
   return (
     <section className='search-container'>
       <input
@@ -23,8 +21,6 @@ const Search = ({ handleSearchTerm }) => {
         value={searchWord}
         onChange={event => submitSearch(event)}
         />
-
-
     </section>
   )
 }
