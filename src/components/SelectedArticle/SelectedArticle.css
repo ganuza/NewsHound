@@ -15,12 +15,18 @@
 
 .selected-article-details {
   background-color: white;
+  margin: 0px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 80%;
-  width: 60%;
+  /* height: 80%; */
+  width: 50%;
 }
 
 .selected-article-image {
-  height: 80%;
+  width: 30%;
+}
+
+h2 {
+  font-size: 1.75rem;
 }
